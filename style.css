@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* * {
+    font-family: 'Oswald', sans-serif;
+} */
+
+body {
+    background-color: #e4e4e4;
+    user-select: none;
+    user-zoom: none;
+}
+
+main {
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+main h1 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+#inputs {
+    background-color: rgb(234, 234, 234);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    box-shadow: -1px 1px 10px #bbbbbb;
+}
+
+#input-field {
+    width: 70%;
+    margin-right: 8px;
+}
+
+#input-field:hover,
+#input-field:focus-within {
+    outline: 1px solid rgb(51, 105, 214);
+    box-shadow: -1px 1px 10px rgb(124, 150, 202);
+}
+
+#input-field,
+#inputs button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+}
+
+#inputs button {
+    width: 20%;
+    background-color: rgb(51, 105, 214);
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border: 1px solid transparent;
+}
+
+#inputs button:hover {
+    background-color: rgb(51, 105, 214);
+    box-shadow: 3px 1px 10px #8b8b8b;
+    border: 1px solid white;
+
+}
+
+#input-btn.is-active {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+#add-here.added {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto Mono', monospace;
+    padding-left: 10px;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+
+/* #text {
+    font-family: 'Roboto Mono', monospace;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid darkgray;
+    width: 90%;
+    text-align: center;
+} */
+.newDiv {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto Mono', monospace;
+    padding-left: 10px;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.newDiv.change {
+    text-decoration: line-through;
+}
+
+#list svg {
+    margin: 0 1rem;
+}
+
+.task-status {
+    text-align: left;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    color: gray;
+}
