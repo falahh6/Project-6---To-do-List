@@ -5,8 +5,6 @@ let task = [];
 
 
 function addTask(event) {
-    var playAudio = document.getElementById('click-sound');
-    playAudio.play();
     event.preventDefault();
     const text = input.value;
     if (text.trim() != 0) {
@@ -29,16 +27,21 @@ function addTask(event) {
                 newDiv.remove();
                 task.pop(text);
             });
-
             newDiv.querySelector('#checkbox').addEventListener('change', function () {
                 newDiv.classList.toggle('change');
-                let incompleteTaskHolder = document.getElementById('completed-task');
-                newDiv.remove();
-                incompleteTaskHolder.appendChild(newDiv);
-                newDiv.querySelector('#checkbox').addEventListener('change', function () {
-                    newDiv.remove();
+                // let incompleteTaskHolder = document.getElementById('completed-task');
+                // newDiv.remove();
+                // incompleteTaskHolder.appendChild(newDiv);
+                // newDiv.querySelector('#checkbox').addEventListener('change', function () {
+                //     newDiv.remove();
+                //     displayElement.appendChild(newDiv);
+                // });
+                if (newDiv.querySelector('#checkbox').checked) {
+                    incompleteTaskHolder = document.getElementById('completed-task');
+                    incompleteTaskHolder.appendChild(newDiv);
+                } else {
                     displayElement.appendChild(newDiv);
-                });
+                }
             });
         } else {
             alert('you can\'t have same tasks!');
